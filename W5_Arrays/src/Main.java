@@ -87,16 +87,19 @@ public class Main {
 
         // instantiating arrays - no huge difference for now, but will be later!
         int[] myInts2 = new int[] {3,4,5,6,7};
-        int[] myInts3 = new int[5]; // each element is initialized with null (noted acts like 0)
+        int[] myInts3 = new int[5];
+        // each element is initialized with null (noted acts like 0)
 
         int indexChoice = 2;
-        System.out.printf("The value of the number at index %d is %d\n", indexChoice, myInts[indexChoice] );
+        System.out.printf("The value of the number at index %d is %d\n",
+                indexChoice, myInts[indexChoice] );
         // %s for string
         // %d for signed integer
         // %f real number in standard notation
 
         indexChoice = 4;
-        System.out.printf("The student name at index %d is %s\n", indexChoice, students[indexChoice] );
+        System.out.printf("The student name at index %d is %s\n",
+                indexChoice, students[indexChoice] );
 
         System.out.print("\n");
 
@@ -105,9 +108,11 @@ public class Main {
         printCharArray(myName);
         printIntArray(myInts2);
         printIntArray(myInts3);
-        System.out.printf("the product of the first element and 3 is: %d\n\n", 3 * myInts3[0] );
+        System.out.printf("the product of the first element and 3 is: %d\n\n",
+                3 * myInts3[0] );
         myInts3[0] = 5;
-        System.out.printf("the product of the first element and 3 is: %d\n\n", 3 * myInts3[0] );
+        System.out.printf("the product of the first element and 3 is: %d\n\n",
+                3 * myInts3[0] );
     }
 
     private static void printIntArray(int[] input) {
@@ -122,10 +127,10 @@ public class Main {
 
     private static void printStringArray(String[] input) {
         boolean first = true;
-        for (String i : input ) {
+        for (String s : input ) {
             if (!first) System.out.print(" - ");
             first = false;
-            System.out.print(i);
+            System.out.print(s);
         }
         System.out.print("\n");
     }
@@ -167,9 +172,36 @@ public class Main {
     private static void demo3(){
         System.out.println("""
             
-            Demo 3 - Iterating Through Arrays!
-            ------------------------------------------------------------------
-            """);
+        Demo 3 - Iterating Through Arrays!
+        ------------------------------------------------------------------
+        """);
+
+        // let r represent rows, let c represent columns
+        // let rh represent header row, let ch represent header column
+
+        // print the header row
+        System.out.print("    ");
+        for (int rh = 0; rh <= 10; rh++) {
+            System.out.printf(" %d   ",rh);
+        }
+        System.out.print("\n");
+
+        int ch = 0;
+        for (int r = 0; r <= 10; r++) { // one row at a time....
+
+            // add the column header
+            System.out.printf(" %d  ", ch);
+            ch++;
+
+            // add each column
+            for (int c = 0; c <= 10; c++) {
+                System.out.printf(" %d   ", r*c);
+            }
+            System.out.print("\n");
+        }
+
+
+
 
 
     }
@@ -193,16 +225,18 @@ public class Main {
                             { 78, 93, 79, 86}  // assignment 3 (index 2) - 4 marks
                         };
 
-        int a = 1;
-        int s = 2;
-        System.out.printf("Student %d received a grade of %d on assignment %d\n\n", s+1, marks[a][s], a+1 );
+        int a = 1; // assignment 2
+        int s = 2; // student 3
+        System.out.printf("Student %d received a grade of %d on assignment %d\n\n",
+                s+1, marks[a][s], a+1 );
         // returns - Student 3 received a grade of 56 on assignment 2
 
         // Do this using a loop
         System.out.println("All student grades \n -----------------------");
-        for (a = 0; a < 3; a++) {
-            for (s = 0; s < 4; s++) {
-                System.out.printf("Student %d received a grade of %d on assignment %d\n", s+1, marks[a][s], a+1 );
+        for (a = 0; a < 3; a++) {  // for each assignment
+            for (s = 0; s < 4; s++) {  // each student
+                System.out.printf("Student %d received a grade of %d on assignment %d\n",
+                        s+1, marks[a][s], a+1 );
             }
         }
 
@@ -226,7 +260,8 @@ public class Main {
         int[] totals = new int[] {0,0,0,0};
         for (players player : players.values()) {
             for (int hole = 1; hole <= 9; hole++) {
-                System.out.printf("%s scored a %d on hole %d\n", player, golfScores[player.ordinal()][hole-1], hole);
+                System.out.printf("%s scored a %d on hole %d\n",
+                        player, golfScores[player.ordinal()][hole-1], hole);
                 totals[player.ordinal()] += golfScores[player.ordinal()][hole-1];
             }
         }
