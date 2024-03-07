@@ -59,11 +59,10 @@ public class Service {
         }
     }
 
-
     public String getServiceName() {
         return serviceName;
     }
-
+    
     public void setServiceName(String serviceName) {
         if (serviceName.length() > 50) {
             System.out.println("50 character max exceeded.");

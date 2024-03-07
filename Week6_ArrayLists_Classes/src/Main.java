@@ -238,4 +238,40 @@ public class Main {
      }
     //</editor-fold>
 
+    //<editor-fold desc="Populate Programs">
+    private void populateServices() {
+        Service.services = new ArrayList<Service>();
+        Service.services.add(new Service("OCF2","Foreign Oil/Filter","Foreign oil change and filter replacement",109.99f,30,true));
+        Service.services.add(new Service("OCD2","Domestic Oil/Filter","Domestic oil change and filter replacement",79.99f,30,true));
+        Service.services.add(new Service("TR01","Tire Rotation and Balance","Clockwise Rotation of 4 tires with balancing",59.99f,30,true));
+        Service.services.add(new Service("WB01","Wiper Blade Inspection","Inspect wiper blades for cracks and defects",9.99f,5,true));
+        Service.services.add(new Service("AF02","Air Filter Replacement","Replace engine air filter",29.99f,10,true));
+        Service.services.add(new Service("TF02","Transmission Fluid Flush","Flush and replace transmission fluid",79.99f,40,true));
+        Service.services.add(new Service("BFF2","Brake Fluid Flush","Flush and replace brake fluid",69.99f,30,true));
+        Service.services.add(new Service("BP01","Brake Inspection","Inspect brakes for percentage remaining and unusual wear and tear.",34.99f,15,true));
+        Service.services.add(new Service("BPF2","Front Brake Pad Replacement","Replace front brake pads",119.00f,60,true));
+        Service.services.add(new Service("BPR2","Rear Brake Pad Replacement","Replace rear brake pads",119.00f,60,true));
+        Service.services.add(new Service("SP02","Spark Plug Replacement","Replace spark plugs, includes plugs",104.99f,30,true));
+        Service.services.add(new Service("SA01","Steering Alignment","Align front wheels for steering",59.99f,30,true));
+        Service.services.add(new Service("RA02","Radio Installation","Install new custom radio",99.99f,60,true));
+        Service.services.add(new Service("TB02","Timing Belt Replacement","Replace timing belt",349.99f,300,true));
+        Service.services.add(new Service("WI01","Winter Undercoating","Undercoating for rust proofing/winterization",119.00f,45,true));
+        Service.services.add(new Service("WT02","Winter Tire Installation","Install 4 winter tires with balance",79.99f,60,true));
+        Service.services.add(new Service("WF01","Washer Fluid Top-up","Top-up washer fluid",0.00f,5,true));
+    }
+
+    private void populateCars() {
+        Car.cars = new ArrayList<Car>();
+        Car.cars.add(new Car(0,2022,"Honda","Civic","DX","Black","Clint MacDonald"));
+        Car.cars.add(new Car(0,2019,"Acura", "MDX", "", "Silver","John Glenn"));
+        Car.cars.add(new Car(0,2022,"Ford","Mustang","GT","Red","Ford Canada"));
+        Car.cars.add(new Car(0,2020,"Toyota","Camry","Hybrid","Blue","Raj Patel"));
+        Car.cars.add(new Car(0,2018,"Jeep","Wrangler","Sahara","Green","Sarah Smith"));
+        Car.cars.add(new Car(0,2017,"Chevrolet","Silverado","1500","Gray","Gerry McLeod"));
+        Car.cars.add(new Car(0,2023,"Subaru","Outback","Limited","White","Christina McGlaughlin"));
+        Car.cars.add(new Car(0,2016,"Porsche","911","Carrera","Yellow","Bob Spears"));
+        Car.cars.add(new Car(0,2024,"Audi","A4","Quattro","Dark Blue","Stephen Forbes"));
+        Car.cars.add(new Car(0,2025,"Tesla","Model S","Plaid","Midnight Silver","Jennifer Short"));
+    }
+    //</editor-fold>
 }

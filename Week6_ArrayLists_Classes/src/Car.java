@@ -9,6 +9,7 @@ import java.util.ArrayList;
 // car class
 public class Car {
 
+    public static ArrayList<Car> cars;
     private static int autoVin = 1;
 
     //<editor-fold desc="Properties">
